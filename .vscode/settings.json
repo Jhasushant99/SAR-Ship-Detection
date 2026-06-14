@@ -1,0 +1,25 @@
+{
+    "python.defaultInterpreterPath": "./venv/bin/python",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoImportCompletions": true,
+
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/.git": true,
+        "**/venv": true,
+        "**/checkpoints": true,
+        "**/logs": true,
+        "**/results": true,
+        "**/*.pth": true
+    },
+
+    "python.testing.pytestEnabled": false,
+    "jupyter.askForKernelRestart": false,
+    "jupyter.interactiveWindow.creationMode": "perFile"
+}

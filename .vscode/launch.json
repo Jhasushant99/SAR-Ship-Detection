@@ -1,0 +1,160 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    
+    {
+      "name": "Python Debugger: Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    },
+
+    {
+      "name": "Python: Train (Mac)",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": [
+        "--mode",
+        "train",
+        "--epochs",
+        "50",
+        "--batch-size",
+        "4",
+        "--data-root",
+        "data/SSDD"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}",
+        "CUDA_VISIBLE_DEVICES": "0"
+      }
+    },
+
+    {
+      "name": "Python: Resume Train",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": [
+        "--mode",
+        "train",
+        "--epochs",
+        "50",
+        "--batch-size",
+        "4",
+        "--model-path",
+        "checkpoints/latest_checkpoint.pth",
+        "--data-root",
+        "data/SSDD"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      }
+    },
+
+    {
+      "name": "Python: Evaluate",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": [
+        "--mode",
+        "eval",
+        "--model-path",
+        "checkpoints/best_model.pth",
+        "--split",
+        "test",
+        "--data-root",
+        "data/SSDD"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      }
+    },
+
+    {
+      "name": "Python: Visualize",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": [
+        "--mode",
+        "visualize",
+        "--model-path",
+        "checkpoints/best_model.pth",
+        "--split",
+        "test",
+        "--output-dir",
+        "results"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      }
+    },
+
+    {
+      "name": "Python: Sentinel-1 Inference",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": [
+        "--mode",
+        "infer",
+        "--model-path",
+        "checkpoints/best_model.pth",
+        "--safe-path",
+        "data/Sentinel1/sample.SAFE",
+        "--output-dir",
+        "results/sentinel1"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      }
+    },
+
+    {
+      "name": "Python: Quick Debug (1 Epoch)",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "args": [
+        "--mode",
+        "train",
+        "--epochs",
+        "1",
+        "--batch-size",
+        "2",
+        "--data-root",
+        "data/SSDD"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      }
+    },
+
+    {
+      "name": "Python: Current File",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      }
+    }
+  ]
+}

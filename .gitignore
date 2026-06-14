@@ -1,0 +1,19 @@
+# Dataset
+data/
+
+# Checkpoints
+checkpoints/
+*.pth
+*.pt
+
+# Logs
+logs/
+runs/
+wandb/
+
+# Python
+__pycache__/
+*.pyc
+
+# Mac
+.DS_Store
