@@ -11,11 +11,9 @@ Design, train, and evaluate a deep learning-based ship detection model using Syn
 - **Precision**: **0.7309 (73.09%)**
 - **Recall**: **0.9652 (96.52%)**
 
-## Trained Model Weights
-Due to GitHub's 100MB file size limit, the trained model checkpoint (`best_model.pth` - 165MB) is hosted on Google Drive:  
-👉 **[Download best_model.pth here](YOUR_GOOGLE_DRIVE_SHARE_LINK)**  
 
----
+
+
 
 ## Architecture
 
@@ -42,8 +40,6 @@ SARDATA/
 │   └── sentinel1_inference.py       # Sentinel-1 SAFE product inference
 ├── utils/
 │   └── utils.py                     # Checkpoints, visualization, plots
-├── scripts/
-│   └── generate_report.py           # PDF report generator
 ├── data/
 │   └── sar-ship-detection-dataset/
 │       └── SSDD/
